@@ -7,12 +7,11 @@ use Illuminate\Http\Request;
 
 class DataBarangController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
-        //
+        $data = dataBarang::all();
+        return view('dataBarang', compact('data'));
     }
 
     /**
