@@ -42,6 +42,13 @@ class DataBarangController extends Controller
         return back();
     }
 
+    public function delete($id)
+    {
+        $data = dataBarang::find($id);
+        $data->delete();
+        return back();
+    }
+
 
 
 
@@ -77,8 +84,5 @@ class DataBarangController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(dataBarang $dataBarang)
-    {
-        //
-    }
+    
 }
