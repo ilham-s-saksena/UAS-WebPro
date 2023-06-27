@@ -14,12 +14,17 @@ class DataBarangController extends Controller
         return view('dataBarang', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data = new dataBarang();
+        $data->nama_barang = $request->input('nama_barang');
+        $data->kode_barang = $request->input('kode_barang');
+        $data->harga_barang = $request->input('harga_barang');
+        $data->stok = $request->input('stok');
+        $data->terjual = $request->input('terjual');
+        $data->save();
+
+        return back();
     }
 
     /**

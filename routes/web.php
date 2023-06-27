@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/dataBarang', [DataBarangController::class, 'index'])->name('dataBarang');
+Route::post('/dataBarang/add', [DataBarangController::class, 'create'])->name('tambahBarang');
