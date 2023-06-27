@@ -19,7 +19,8 @@ class DataBarangController extends Controller
         $data = new dataBarang();
         $data->nama_barang = $request->input('nama_barang');
         $data->kode_barang = $request->input('kode_barang');
-        $data->harga_barang = $request->input('harga_barang');
+        $data->harga_beli = $request->input('harga_beli');
+        $data->harga_jual = $request->input('harga_jual');
         $data->stok = $request->input('stok');
         $data->terjual = $request->input('terjual');
         $data->save();
